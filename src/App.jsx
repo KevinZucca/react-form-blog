@@ -50,7 +50,7 @@ function App() {
         </button>
       </form>
 
-      <PostList posts={postsList} />
+      <PostList posts={postsList} setPostsList={setPostsList} />
     </>
   );
 }
