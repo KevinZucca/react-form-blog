@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PostList from "./components/PostList";
 import "tailwindcss/tailwind.css";
 import "./App.css";
@@ -50,7 +50,14 @@ function App() {
         </button>
       </form>
 
-      <PostList posts={postsList} setPostsList={setPostsList} />
+      <PostList
+        singlePost={post}
+        posts={postsList}
+        setPostsList={setPostsList}
+        postsList={postsList}
+        setPost={setPost}
+        useEffect={useEffect}
+      />
     </>
   );
 }
